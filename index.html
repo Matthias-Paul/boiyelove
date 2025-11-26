@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta -->
@@ -8,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SEO / Social -->
-    <title>Boiyelove International </title>
-  <meta
+    <title>Boiyelove International | Expert IT Solutions & Services</title>
+    <meta
       name="title"
-      content="Boiyelove International"
+      content="Boiyelove International | Expert IT Solutions & Services"
     />
     <meta
       name="description"
-      content="Boiyelove is a privately owned IT Support and IT Services business that started in 2007. Today we’re proud to boast a strong team of IT engineers who thrive on rolling up their sleeves and solving your IT problems and meeting your business needs."
-    /> 
+      content="Boiyelove is a privately owned IT Support and IT Services business that started in 2007. Today we're proud to boast a strong team of IT engineers who thrive on rolling up their sleeves and solving your IT problems and meeting your business needs."
+    />
     <meta
       name="keywords"
       content="Software Development, IT Consultancy, Cyber Security, Cloud Computing, Managed IT"
@@ -29,53 +28,215 @@
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.boiyelove.com/" />
-    <meta
-      property="og:title"
-      content="Boiyelove International"
-    />
+    <meta property="og:title" content="Boiyelove International" />
     <meta
       property="og:description"
-      content="Boiyelove is a privately owned IT Support and IT Services business that started in 2007. Today we’re proud to boast a strong team of IT engineers who thrive on rolling up their sleeves and solving your IT problems and meeting your business needs."
+      content="Boiyelove is a privately owned IT Support and IT Services business that started in 2007. Today we're proud to boast a strong team of IT engineers who thrive on rolling up their sleeves and solving your IT problems and meeting your business needs."
     />
     <meta
       property="og:image"
-      <!-- content="https://www.boiyelove.com/assets/logo.png" -->
+      content="https://www.boiyelove.com/assets/logo.png"
     />
     <meta property="og:site_name" content="Boiyelove International" />
     <meta property="og:locale" content="en_NG" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Your Page Title" />
-    <meta name="twitter:description" content="Short description" />
-    <meta name="twitter:image" content="https://example.com/og-image.jpg" />
+    <meta
+      name="twitter:title"
+      content="Boiyelove International | Expert IT Solutions"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert IT support and services for your business since 2007"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.boiyelove.com/assets/logo.png"
+    />
 
-    <!-- Favicon & touch icons (replace with your files) -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/styles.css" />
 
-    <!-- Optional: preload important fonts/assets -->
-    <!-- <link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#1e40af",
+            },
+          },
+        },
+      };
+    </script>
 
     <!-- Theme color for mobile UI -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#667eea" />
   </head>
-  <body>
-
-    <!-- Page wrapper -->
+  <body class="scroll-smooth">
     <div id="root">
       <main id="main-content" role="main">
-        <h1>Page heading</h1>
-        <p>Welcome — start building your page here.</p>
+        <!-- Hero section -->
+        <div class="relative">
+          <div
+            id="hero"
+            class="min-h-screen flex flex-col justify-center items-center hero-bg text-white px-4 pt-20"
+          >
+            <div class="max_width">
+              <div class="pb-40 mx-auto text-center z-10 animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                  Say goodbye to frequent<br />IT breakage
+                </h1>
+                <div class="h-20 flex items-center justify-center">
+                  <h2
+                    id="changing-text"
+                    class="text-3xl md:text-5xl font-bold text-[#ffae0c]"
+                  ></h2>
+                </div>
+                <p
+                  class="text-xl md:text-2xl mt-6 text-gray-100 max-w-3xl mx-auto"
+                >
+                  Start getting the support you need. Let us handle IT for you.
+                </p>
+
+                <div
+                  class="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+                >
+                  <button
+                    class="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105"
+                  >
+                    Schedule Consultation
+                  </button>
+                </div>
+
+                <div class="flex flex-col items-center mt-16">
+                  <div class="flex items-center gap-4 w-full max-w-2xl">
+                    <div class="flex-1 h-px bg-white/30"></div>
+                    <p class="text-sm text-gray-200 whitespace-nowrap">
+                      Custom IT services and solutions for your business
+                    </p>
+                    <div class="flex-1 h-px bg-white/30"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="px-4 pb-10 w-full flex left-1/2 -translate-x-1/2 items-center justify-center absolute lg:bottom-[-150px]"
+          >
+            <div class=" grid lg:grid-cols-5 pt-10 lg:pt-0 gap-4 ">
+              <!-- Service Card 1 -->
+              <div
+                class="bg-white flex flex-col items-center justify-center p-6 rounded-xl shadow-lg card-hover"
+              >
+                <div class="service-icon mb-4">
+                  <img
+                    src="/assets/computer.png"
+                    alt="Software Development"
+                    class="w-6 h-6"
+                  />
+                </div>
+                <h3 class="text-lg text-center font-bold text-gray-900 mb-3">
+                  Software Development
+                </h3>
+                <p class="text-gray-600 text-sm text-center">
+                  We offer a comprehensive range of managed IT…
+                </p>
+              </div>
+
+              <!-- Service Card 2 -->
+              <div
+                class="bg-white flex flex-col items-center justify-center p-4 rounded-xl shadow-lg card-hover"
+              >
+                <div class="service-icon mb-4">
+                  <img
+                    src="/assets/bulb.png"
+                    alt="IT Consultancy"
+                    class="w-6 h-6"
+                  />
+                </div>
+                <h3 class="text-lg text-center font-bold text-gray-900 mb-3">
+                  IT Consultancy
+                </h3>
+                <p class="text-gray-600 text-sm text-center">
+                  Our IT consulting team will provide you with the right
+                  strategies, tools…
+                </p>
+              </div>
+
+              <!-- Service Card 3 -->
+              <div
+                class="bg-white flex flex-col items-center justify-center p-4 rounded-xl shadow-lg card-hover"
+              >
+                <div class="service-icon mb-4">
+                  <img
+                    src="/assets/lock.png"
+                    alt="Cyber security"
+                    class="w-6 h-6"
+                  />
+                </div>
+                <h3 class="text-lg text-center font-bold text-gray-900 mb-3">
+                  Cyber security
+                </h3>
+                <p class="text-gray-600 text-sm text-center">
+                  Protect your business from malware, hackers…
+                </p>
+              </div>
+
+              <!-- Service Card 4 -->
+              <div
+                class="bg-white flex flex-col items-center justify-center p-4 rounded-xl shadow-lg card-hover"
+              >
+                <div class="service-icon mb-4">
+                  <img
+                    src="/assets/cloud.png"
+                    alt="Cloud computing"
+                    class="w-6 h-6"
+                  />
+                </div>
+                <h3 class="text-lg text-center font-bold text-gray-900 mb-3">
+                  Cloud computing
+                </h3>
+                <p class="text-gray-600 text-sm text-center">
+                  Prevent data loss with encrypted storage and…
+                </p>
+              </div>
+
+              <!-- Service Card 5 -->
+              <div
+                class="bg-white flex flex-col items-center justify-center p-4 rounded-xl shadow-lg card-hover"
+              >
+                <div class="service-icon mb-4">
+                   <img
+                    src="/assets/manage.png"
+                    alt="Managed IT"
+                    class="w-6 h-6"
+                  />
+                </div>
+                <h3 class="text-lg text-center font-bold text-gray-900 mb-3">
+                  Managed IT
+                </h3>
+                <p class="text-gray-600 text-sm text-center">
+                  We offer a comprehensive range of managed IT…
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="pb-20 max_width bg-white"></section>
       </main>
     </div>
 
     <!-- Scripts -->
-  
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
