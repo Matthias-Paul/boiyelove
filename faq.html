@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO / Social -->
+    <title>FAQ - Boiyelove | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers and solutions to common IT issues. If you can't find an answer, contact us and we will be happy to help." />
+    <meta name="author" content="Boiyelove International LLC" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:title" content="FAQ - Boiyelove" />
+    <meta property="og:description" content="Frequently Asked Questions about our IT services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boiyelove.com/faq" />
+    <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FAQ - Boiyelove" />
+    <meta name="twitter:description" content="Frequently Asked Questions" />
+    <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Favicon & touch icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme color for mobile UI -->
+    <meta name="theme-color" content="#191937" />
+
+    <style>
+      /* FAQ-specific styles */
+      .faq-hero {
+        background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
+        padding: 160px 0 100px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .faq-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+          linear-gradient(30deg, transparent 48%, rgba(255,255,255,0.05) 49%, rgba(255,255,255,0.05) 51%, transparent 52%),
+          linear-gradient(60deg, transparent 48%, rgba(255,255,255,0.05) 49%, rgba(255,255,255,0.05) 51%, transparent 52%),
+          linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.05) 49%, rgba(255,255,255,0.05) 51%, transparent 52%);
+        background-size: 60px 60px;
+        opacity: 0.3;
+      }
+
+      .faq-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+      }
+
+      .faq-icon svg {
+        width: 48px;
+        height: 48px;
+        color: white;
+      }
+
+      .faq-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+
+      .faq-hero p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .faq-search {
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .faq-search input {
+        width: 100%;
+        padding: 18px 60px 18px 24px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        outline: none;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .faq-search button {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #191937;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .faq-search button:hover {
+        background: #2d2d5f;
+      }
+
+      .faq-contact-note {
+        margin-top: 30px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .faq-contact-note a {
+        color: white;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 100px 0;
+        background: #f8f9fa;
+      }
+
+      .faq-section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .faq-section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .faq-question {
+        padding: 24px 28px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.3s ease;
+        user-select: none;
+      }
+
+      .faq-question:hover {
+        background: #f8f9fa;
+      }
+
+      .faq-question-text {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.5;
+      }
+
+      .faq-toggle {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e91e63;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-toggle {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-answer-content {
+        padding: 0 28px 24px;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+      }
+
+      /* CTA Section */
+      .faq-cta-section {
+        background: white;
+        padding: 100px 0;
+      }
+
+      .faq-cta-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .faq-cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .faq-cta-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+      }
+
+      .faq-cta-contact {
+        color: #e91e63;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .faq-cta-contact:hover {
+        text-decoration: underline;
+      }
+
+      .faq-cta-buttons {
+        display: flex;
+        gap: 16px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .faq-cta-primary {
+        background: #191937;
+        color: white;
+        padding: 16px 36px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .faq-cta-primary:hover {
+        background: #2d2d5f;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(25, 25, 55, 0.3);
+      }
+
+      .faq-cta-secondary {
+        background: #e91e63;
+        color: white;
+        padding: 16px 36px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .faq-cta-secondary:hover {
+        background: #c2185b;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+      }
+
+      .faq-cta-image {
+        position: relative;
+      }
+
+      .faq-cta-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+      }
+
+      .faq-not-found {
+        text-align: center;
+        margin-top: 40px;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+      }
+
+      .faq-not-found h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+      }
+
+      .faq-not-found p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-cta-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .faq-hero {
+          padding: 120px 0 80px;
+        }
+
+        .faq-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .faq-hero p {
+          font-size: 1rem;
+        }
+
+        .faq-section {
+          padding: 60px 0;
+        }
+
+        .faq-section-title {
+          font-size: 2rem;
+        }
+
+        .faq-cta-section {
+          padding: 60px 0;
+        }
+
+        .faq-cta-content h2 {
+          font-size: 2rem;
+        }
+
+        .faq-cta-buttons {
+          flex-direction: column;
+        }
+
+        .faq-cta-primary,
+        .faq-cta-secondary {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .faq-hero h1 {
+          font-size: 2rem;
+        }
+
+        .faq-question {
+          padding: 20px;
+        }
+
+        .faq-question-text {
+          font-size: 0.95rem;
+        }
+
+        .faq-answer-content {
+          padding: 0 20px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;">
+      Skip to content
+    </a>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      
+      <!-- Hero Section -->
+      <section class="faq-hero">
+        <div class="container">
+          <div class="faq-hero-content">
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h1>What Are You Looking For?</h1>
+            <p>
+              Find answers and solutions to common IT issues. If you can't find an answer, contact us and we will be happy to help.
+            </p>
+            
+            <form class="faq-search" onsubmit="event.preventDefault(); searchFAQ(true);">
+              <input 
+                type="text" 
+                id="faq-search-input"
+                placeholder="Search..." 
+                aria-label="Search FAQs"
+              />
+              <button type="submit">Search</button>
+            </form>
+
+            <p class="faq-contact-note">
+              Please call our office at <a href="tel:+19294746274">+1 (929) 474 62 74</a> or email us with your question.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <div class="faq-section-header">
+            <h2 class="faq-section-title">TOP 10 MOST POPULAR FAQs</h2>
+          </div>
+
+          <div class="faq-grid" id="faq-grid">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">Are Free Anti-Virus software any good?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  First and foremost, you never want to go without security protection on your computer. Free Anti-virus software does offer basic protection. However, it will be happy to inform you of the fact that you are not a paid subscriber and that all of our clients for Spyware, Malware and Virus protection.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What should I do before I call for help?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  When possible, write down any information about error messages and other recent activity. Make a note of the exact wording of an error message along with specifics like: what application was running when the error occurred, what were you doing when this problem arose? Knowing this information can be very helpful to identify the problem.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What exactly are Managed IT Services?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Simply put, Boiyelove Managed IT Services means we take care of your entire information technology requirement. We manage all your hardware, software, network performance, cybersecurity support, and IT staffing needs. It also means Boiyelove sets up your on-site or cloud technology and support team, providing scheduled maintenance and upgrading of your systems, along with emergency disaster recovery and backup.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What does having Managed IT Services cost?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Our service model uses a fixed monthly fee, which is based on the size and complexity of your particular network. Once configured, your Managed IT services contract will include all support for every component of your network, providing you with peace of mind about safety and security. And it includes your IT maintenance costs.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What is cloud backup?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Cloud backup, also known as online backup, is the process where your entire backups are transferred to an offsite server every night. The server houses a secure data center. In short, Cloud Backup replaces the need for someone to see a backup tape every night to be stored at a remote data center.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What if we already have an internal IT department?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  No problem! We offer scalable solutions that can be tailored to meet your specific needs. Whether you need extra resources for managed IT services and consulting, security solutions or service desk support, we can work alongside your current team and provide proactive monitoring, project support, or expertise with an affordable and customized flat rate service plan.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What kind of response times can I expect?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  We work with each client to establish specific expectations. Our measurable service levels specify clear consequences for not meeting service requirements. Some companies need simple project help in growing their business while others have serious technical challenges to resolve.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">How does a flat rate billing save me money?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Flat-rate billing gives you the ability to budget your IT expenses so you can better focus on your core business goals. We customize each service package with a fixed price, so you only pay for what you need. Boiyelove provides IT help that saves our clients from overspending on their IT needs. And rest of all, everything is straightforward, transparent, and fixed monthly costs. We Don't Enact from you!
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">How Long is a Managed Services Contract For?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Managed IT Services contracts vary in length. Some companies offer month-to-month programs, while others require a multi-year contract. Some have a very high startup costs and lower monthly while others require a multi-year contract. Some have a very high startup costs with clients ensure offer a middle of the road monthly cost, and spread the cost of startup over the term of the agreement.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span class="faq-question-text">What types of systems do you support?</span>
+                <div class="faq-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  We pride ourselves on being "ecosystem agnostic," whether you use Google Apps or Office365, Windows or Mac, Android or iOS, we will support you. Again. Need to install a server onsite or host one virtually on Amazon or Azure? We will support you. Need to transition from one ecosystem to another? We'll be there for you.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Not Found Message (hidden by default) -->
+          <div class="faq-not-found" id="faq-not-found" style="display: none;">
+            <h3>Couldn't find your answer?</h3>
+            <p><a href="#" onclick="document.getElementById('faq-not-found').style.display='none'; document.getElementById('faq-grid').style.display='grid';">Ask a question</a> and we'll get back to you shortly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="faq-cta-section">
+        <div class="container">
+          <div class="faq-cta-wrapper">
+            <div class="faq-cta-content">
+              <p style="font-size: 1rem; font-weight: 600; color: #64748b; margin-bottom: 12px;">Let's get started</p>
+              <h2>We will help you overcome your technology challenges</h2>
+              <p>
+                Call us on: <a href="tel:+19294746274" class="faq-cta-contact">+1 (929) 474 62 74</a>
+              </p>
+              <p>
+                or email us at <a href="mailto:hello@boiyelove.com" class="faq-cta-contact">hello@boiyelove.com</a>
+              </p>
+              <p>
+                or fill out the following form to start the conversation.
+              </p>
+              <div class="faq-cta-buttons">
+                <a href="/contact.html"><button class="faq-cta-primary">Start with a Free Assessment</button></a>
+        
+              </div>
+            </div>
+            <div class="faq-cta-image">
+              <img src="/Images/img.png" alt="Technology Solutions" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script>
+      // FAQ Toggle Function
+      function toggleFAQ(element) {
+        const faqItem = element.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          faqItem.classList.remove('active');
+        } else {
+          faqItem.classList.add('active');
+        }
+      }
+
+      // Search Function
+      function searchFAQ(shouldScroll = false) {
+        const searchTerm = document.getElementById('faq-search-input').value.toLowerCase();
+        const faqItems = document.querySelectorAll('.faq-item');
+        const faqGrid = document.getElementById('faq-grid');
+        const notFound = document.getElementById('faq-not-found');
+        const faqSection = document.querySelector('.faq-section');
+        let foundCount = 0;
+
+        if (searchTerm === '') {
+          // Show all items if search is empty
+          faqItems.forEach(item => {
+            item.style.display = 'block';
+          });
+          faqGrid.style.display = 'grid';
+          notFound.style.display = 'none';
+          return;
+        }
+
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question-text').textContent.toLowerCase();
+          const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+          
+          if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            item.style.display = 'block';
+            foundCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (foundCount === 0) {
+          faqGrid.style.display = 'none';
+          notFound.style.display = 'block';
+        } else {
+          faqGrid.style.display = 'grid';
+          notFound.style.display = 'none';
+        }
+
+        // Scroll to FAQ section smoothly only when Enter is pressed
+        if (shouldScroll && searchTerm !== '') {
+          setTimeout(() => {
+            faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      }
+
+      // Allow searching as user types (without scrolling)
+      document.getElementById('faq-search-input').addEventListener('input', function() {
+        searchFAQ(false);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO / Social -->
+    <title>Pricing - Boiyelove International LLC</title>
+    <meta name="description" content="Flexible, transparent pricing that adapts to your needs. Free 30-day trial with no credit card required." />
+    <meta name="author" content="Boiyelove International LLC" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:title" content="Pricing - Boiyelove International" />
+    <meta property="og:description" content="Flexible pricing plans for businesses of all sizes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boiyelove.com/pricing" />
+    <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pricing - Boiyelove International" />
+    <meta name="twitter:description" content="Flexible pricing plans" />
+    <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Favicon & touch icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme color for mobile UI -->
+    <meta name="theme-color" content="#191937" />
+
+    <style>
+      /* Pricing Page Styles */
+      .pricing-hero {
+        background: linear-gradient(180deg, #a8e6f0 0%, #7dd3e0 100%);
+        padding: 140px 0 100px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .pricing-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .pricing-hero h1 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        color: #191937;
+        margin-bottom: 20px;
+        letter-spacing: -0.5px;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .pricing-hero p {
+        font-size: 1.05rem;
+        color: #2d2d5f;
+        margin-bottom: 40px;
+        opacity: 0.9;
+      }
+
+      /* Billing Toggle */
+      .billing-toggle {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        padding: 6px;
+        margin-bottom: 60px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .billing-option {
+        padding: 12px 36px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #2d2d5f;
+        background: transparent;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+      }
+
+      .billing-option.active {
+        background: #2d2d5f;
+        color: white;
+        box-shadow: 0 4px 12px rgba(45, 45, 95, 0.3);
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        margin-top: -140px;
+        padding: 20px 0 120px;
+        background: linear-gradient(180deg, #7dd3e0 0%, #a8e6f0 100%);
+      }
+
+      .pricing-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .pricing-card {
+        background: white;
+        border-radius: 20px;
+        padding: 48px 40px;
+        position: relative;
+        transition: all 0.4s ease;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card.popular {
+        border: 3px solid #ff1493;
+        position: relative;
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff1493;
+        color: white;
+        white-space: nowrap;
+        padding: 8px 32px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .pricing-card-header {
+        margin-bottom: 32px;
+      }
+
+      .plan-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #191937;
+        margin-bottom: 12px;
+      }
+
+      .plan-description {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        min-height: 48px;
+      }
+
+      .pricing-amount {
+        margin: 32px 0;
+      }
+
+      .price {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #191937;
+        line-height: 1;
+      }
+
+      .price-period {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .price-note {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-top: 12px;
+        font-style: italic;
+      }
+
+      .cta-button {
+        width: 100%;
+        padding: 16px 32px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .cta-button.primary {
+        background: #2d2d5f;
+        color: white;
+      }
+
+      .cta-button.primary:hover {
+        background: #191937;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(45, 45, 95, 0.3);
+      }
+
+      .cta-button.secondary {
+        background: #ff1493;
+        color: white;
+      }
+
+      .cta-button.secondary:hover {
+        background: #e00080;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
+      }
+
+      .features-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #191937;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      .features-list li {
+        padding: 12px 0;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .features-list li:last-child {
+        border-bottom: none;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .pricing-card.popular {
+          order: -1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .pricing-hero {
+          padding: 120px 0 80px;
+        }
+
+        .pricing-hero h1 {
+          font-size: 2rem;
+        }
+
+        .pricing-section {
+          padding: 60px 0 80px;
+        }
+
+        .pricing-card {
+          padding: 36px 28px;
+        }
+
+        .price {
+          font-size: 2.75rem;
+        }
+
+        .billing-option {
+          padding: 10px 24px;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .pricing-hero h1 {
+          font-size: 1.75rem;
+        }
+
+        .billing-option {
+          padding: 8px 20px;
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;">
+      Skip to content
+    </a>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      
+      <!-- Pricing Hero -->
+      <section class="pricing-hero">
+        <div class="container">
+          <div class="pricing-hero-content">
+            <h1>Flexible, Transparent Pricing That Adapts To Your Needs</h1>
+            <p>Free 30 Day Trial. No credit card required. Cancel anytime.</p>
+            
+            <!-- Billing Toggle -->
+            <div class="billing-toggle">
+              <button class="billing-option active" data-billing="monthly" onclick="toggleBilling('monthly')">
+                Monthly billing
+              </button>
+              <button class="billing-option" data-billing="annual" onclick="toggleBilling('annual')">
+                Annual billing
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Cards Section -->
+      <section class="pricing-section">
+        <div class="container">
+          <div class="pricing-container">
+            <div class="pricing-grid">
+              
+              <!-- careBasic Plan -->
+              <div class="pricing-card animate-on-scroll delay-1">
+                <div class="pricing-card-header">
+                  <h3 class="plan-name">careBasic</h3>
+                  <p class="plan-description">Designed for businesses with basic IT requirements</p>
+                </div>
+
+                <div class="pricing-amount">
+                  <div class="price" data-monthly="29" data-annual="319">
+                    $<span class="price-value">29</span>
+                  </div>
+                  <div class="price-period">
+                    /<span class="period-text">month</span>
+                  </div>
+                  <p class="price-note">*Pricing includes coverage for users</p>
+                </div>
+
+                <a href="#" class="cta-button primary">Start Free Trial</a>
+
+                <div class="features-section">
+                  <h4 class="features-title">All careBasic services include:</h4>
+                  <ul class="features-list">
+                    <li>24/7 system monitoring</li>
+                    <li>Security management</li>
+                    <li>Patch management</li>
+                    <li>Remote support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- carePlus Plan (Most Popular) -->
+              <div class="pricing-card popular animate-on-scroll delay-2">
+                <div class="popular-badge">Most Popular</div>
+                
+                <div class="pricing-card-header">
+                  <h3 class="plan-name">carePlus</h3>
+                  <p class="plan-description">Designed for businesses looking to eliminate costly break/fix IT services</p>
+                </div>
+
+                <div class="pricing-amount">
+                  <div class="price" data-monthly="49" data-annual="519">
+                    $<span class="price-value">49</span>
+                  </div>
+                  <div class="price-period">
+                    /<span class="period-text">month</span>
+                  </div>
+                  <p class="price-note">*Pricing includes coverage for users</p>
+                </div>
+
+                <a href="#" class="cta-button secondary">Start Free Trial</a>
+
+                <div class="features-section">
+                  <h4 class="features-title">All carePlus services include:</h4>
+                  <ul class="features-list">
+                    <li>Preventive maintenance</li>
+                    <li>Asset management</li>
+                    <li>Secure cloud backup</li>
+                    <li>Server/Network support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- carePro Plan -->
+              <div class="pricing-card animate-on-scroll delay-3">
+                <div class="pricing-card-header">
+                  <h3 class="plan-name">carePro</h3>
+                  <p class="plan-description">A fully comprehensive plan for any business size or needs</p>
+                </div>
+
+                <div class="pricing-amount">
+                  <div class="price" data-monthly="69" data-annual="819">
+                    $<span class="price-value">69</span>
+                  </div>
+                  <div class="price-period">
+                    /<span class="period-text">month</span>
+                  </div>
+                  <p class="price-note">*Pricing includes coverage for users</p>
+                </div>
+
+                <a href="#" class="cta-button primary">Start Free Trial</a>
+
+                <div class="features-section">
+                  <h4 class="features-title">All carePro services include:</h4>
+                  <ul class="features-list">
+                    <li>Reporting</li>
+                    <li>Vendor management</li>
+                    <li>Virtual CIO (vCIO)</li>
+                    <li>Workstation support</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
+    <script>
+      // Billing toggle functionality
+      function toggleBilling(billingType) {
+        // Update button states
+        const buttons = document.querySelectorAll('.billing-option');
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.dataset.billing === billingType) {
+            btn.classList.add('active');
+          }
+        });
+
+        // Update prices
+        const priceElements = document.querySelectorAll('.price');
+        const periodTexts = document.querySelectorAll('.period-text');
+
+        priceElements.forEach(priceEl => {
+          const priceValue = priceEl.querySelector('.price-value');
+          const newPrice = billingType === 'monthly' 
+            ? priceEl.dataset.monthly 
+            : priceEl.dataset.annual;
+          
+          // Animate price change
+          priceValue.style.opacity = '0';
+          setTimeout(() => {
+            priceValue.textContent = newPrice;
+            priceValue.style.opacity = '1';
+          }, 200);
+        });
+
+        // Update period text
+        periodTexts.forEach(text => {
+          text.style.opacity = '0';
+          setTimeout(() => {
+            text.textContent = billingType === 'monthly' ? 'month' : 'year';
+            text.style.opacity = '1';
+          }, 200);
+        });
+      }
+
+      // Add smooth transition to price values
+      document.querySelectorAll('.price-value, .period-text').forEach(el => {
+        el.style.transition = 'opacity 0.2s ease';
+      });
+    </script>
+  </body>
+</html>

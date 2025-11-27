@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO / Social -->
+    <title>Careers - Join Our Team | Boiyelove International LLC</title>
+    <meta
+      name="description"
+      content="Join the Boiyelove International team. We're a Great Place to Work and Deloitte Best Managed Company. Explore current job openings."
+    />
+    <meta name="author" content="Boiyelove International LLC" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:title" content="Careers - Boiyelove International" />
+    <meta
+      property="og:description"
+      content="Join our award-winning team. Current openings available."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boiyelove.com/careers" />
+    <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Careers - Boiyelove International" />
+    <meta name="twitter:description" content="Join our team" />
+    <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Favicon & touch icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme color for mobile UI -->
+    <meta name="theme-color" content="#191937" />
+
+    <style>
+      /* Careers Page Styles */
+      .careers-hero {
+        background: linear-gradient(
+            135deg,
+            rgba(25, 25, 55, 0.95) 0%,
+            rgba(45, 45, 95, 0.95) 100%
+          ),
+          url("Images/careers-hero-bg.jpg") center/cover no-repeat;
+        padding: 180px 0 120px;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+      }
+
+      .careers-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.5;
+      }
+
+      /* Network pattern overlay */
+      .careers-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='network' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='50' cy='50' r='2' fill='%23ffffff' opacity='0.3'/%3E%3Cline x1='50' y1='50' x2='100' y2='50' stroke='%23ffffff' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='50' y1='50' x2='50' y2='100' stroke='%23ffffff' stroke-width='0.5' opacity='0.2'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23network)'/%3E%3C/svg%3E");
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      .careers-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .breadcrumb {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+        opacity: 0.9;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .breadcrumb .separator {
+        margin: 0 12px;
+        opacity: 0.6;
+      }
+
+      .careers-hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 28px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+
+      .careers-hero p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        opacity: 0.95;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 16px 48px;
+        background: white;
+        color: #191937;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      }
+
+      .cta-button:hover {
+        background: whitesmoke;
+        color: #191937;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      }
+
+      /* Values Section */
+      .values-section {
+        padding: 100px 0;
+        background: white;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 48px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .value-card {
+        text-align: left;
+        padding: 48px 36px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 16px;
+        background: white;
+        border: 2px solid #e9ecef;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .value-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #191937 0%, #2d2d5f 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 48px rgba(25, 25, 55, 0.15);
+        border-color: #191937;
+      }
+
+      .value-card:hover::before {
+        opacity: 1;
+      }
+
+      .value-card:nth-child(1) {
+        color: #191937;
+      }
+      .value-card:nth-child(2) {
+        color: #191937;
+      }
+      .value-card:nth-child(3) {
+        color: #191937;
+      }
+      .value-card:nth-child(4) {
+        color: #191937;
+      }
+
+      .value-number {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 24px;
+        line-height: 1;
+        color: #191937;
+        display: inline-block;
+        opacity: 0.08;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+      }
+
+      .value-card:nth-child(1) .value-number {
+        color: #191937;
+      }
+      .value-card:nth-child(2) .value-number {
+        color: #191937;
+      }
+      .value-card:nth-child(3) .value-number {
+        color: #191937;
+      }
+      .value-card:nth-child(4) .value-number {
+        color: #191937;
+      }
+
+      .value-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #191937;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .value-card:nth-child(1) .value-title {
+        color: #191937;
+      }
+      .value-card:nth-child(2) .value-title {
+        color: #191937;
+      }
+      .value-card:nth-child(3) .value-title {
+        color: #191937;
+      }
+      .value-card:nth-child(4) .value-title {
+        color: #191937;
+      }
+
+      .value-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Openings Section */
+      .openings-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      }
+
+      .openings-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .openings-subtitle {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #4a90e2;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
+
+      .openings-title {
+        font-size: 2.75rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+
+      .openings-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .openings-table-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .openings-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .openings-table thead {
+        background: #191937;
+        color: white;
+      }
+
+      .openings-table thead th {
+        padding: 20px 24px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .openings-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+      }
+
+      .openings-table tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      .openings-table tbody tr:hover {
+        background: #f8f9fa;
+      }
+
+      .openings-table tbody td {
+        padding: 24px;
+        font-size: 1rem;
+      }
+
+      .role-cell {
+        color: #4a90e2;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .role-cell:hover {
+        color: #191937;
+        text-decoration: underline;
+      }
+
+      .location-cell,
+      .type-cell {
+        color: var(--text-secondary);
+      }
+
+      .apply-button {
+        display: inline-block;
+        padding: 10px 28px;
+        background: #191937;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .apply-button:hover {
+        background: #191937;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(25, 25, 55, 0.3);
+      }
+
+      .linkedin-cta {
+        text-align: center;
+        margin-top: 48px;
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+      }
+
+      .linkedin-cta a {
+        color: #0077b5;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .linkedin-cta a:hover {
+        text-decoration: underline;
+        color: #005885;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .values-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .careers-hero {
+          padding: 140px 0 80px;
+        }
+
+        .careers-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .careers-hero p {
+          font-size: 1rem;
+        }
+
+        .values-section {
+          padding: 60px 0;
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .openings-section {
+          padding: 60px 0;
+        }
+
+        .openings-title {
+          font-size: 2rem;
+        }
+
+        /* Mobile table - stack layout */
+        .openings-table-container {
+          overflow-x: auto;
+        }
+
+        .openings-table {
+          min-width: 600px;
+        }
+
+        .openings-table thead th,
+        .openings-table tbody td {
+          padding: 16px;
+          font-size: 0.9rem;
+        }
+
+        .apply-button {
+          padding: 8px 20px;
+          font-size: 0.75rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .careers-hero h1 {
+          font-size: 2rem;
+        }
+
+        .value-number {
+          font-size: 2.5rem;
+        }
+
+        .value-title {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a
+      class="skip-link"
+      href="#main-content"
+      style="position: absolute; left: -9999px"
+    >
+      Skip to content
+    </a>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Hero Section -->
+      <section class="careers-hero">
+        <div class="container">
+          <div class="careers-hero-content">
+            <div class="breadcrumb">
+              <a href="/">Boiyelove International</a>
+              <span class="separator">›</span>
+              <span>Careers</span>
+            </div>
+            <h1>Careers</h1>
+            <p>
+              Along the way, we have picked up plenty of awards, we currently
+              rank 3rd in the Great Place to Work's Best Workplaces and have
+              been a Deloitte Best Managed Company for over 10 years.
+            </p>
+            <a href="/contact.html" class="cta-button">Contact us now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="values-section">
+        <div class="container">
+          <div class="values-grid">
+            <div class="value-card animate-on-scroll delay-1">
+              <div class="value-number">1</div>
+              <h3 class="value-title">Teamwork</h3>
+              <p class="value-description">
+                Working together is paramount to our success. We encourage
+                diversity of opinion and trust.
+              </p>
+            </div>
+
+            <div class="value-card animate-on-scroll delay-2">
+              <div class="value-number">2</div>
+              <h3 class="value-title">Respect</h3>
+              <p class="value-description">
+                Treat all employees, vendors & partners with respect. We thrive
+                on transparency & honesty.
+              </p>
+            </div>
+
+            <div class="value-card animate-on-scroll delay-3">
+              <div class="value-number">3</div>
+              <h3 class="value-title">Passion</h3>
+              <p class="value-description">
+                We are passionate about the success of our employees, our
+                partners and our products.
+              </p>
+            </div>
+
+            <div class="value-card animate-on-scroll delay-4">
+              <div class="value-number">4</div>
+              <h3 class="value-title">Innovation</h3>
+              <p class="value-description">
+                Dare to be different in all areas of business, take risks and
+                learn from each other.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Openings Section -->
+      <section class="openings-section">
+        <div class="container">
+          <div class="openings-header animate-on-scroll">
+            <div class="openings-subtitle">Join Team Continuum!</div>
+            <h2 class="openings-title">Current Openings</h2>
+            <p class="openings-description">
+              Feel fulfilled. Have fun. Help us to shape the future.
+            </p>
+          </div>
+
+          <div class="openings-table-container animate-on-scroll delay-2">
+            <table class="openings-table">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Location</th>
+                  <th>Type</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="" class="role-cell"
+                      >Engineer: Observability Applications</a
+                    >
+                  </td>
+                  <td class="location-cell">Remote</td>
+                  <td class="type-cell">Contract</td>
+                  <td style="text-align: right">
+                    <a href="/contact.html" class="apply-button">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#apply" class="role-cell"
+                      >Cloud Ops Administrator</a
+                    >
+                  </td>
+                  <td class="location-cell">Remote</td>
+                  <td class="type-cell">Contract</td>
+                  <td style="text-align: right">
+                    <a href="/contact.html" class="apply-button">Apply Now</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#apply" class="role-cell"
+                      >Platform Support Specialist</a
+                    >
+                  </td>
+                  <td class="location-cell">Remote</td>
+                  <td class="type-cell">Contract</td>
+                  <td style="text-align: right">
+                    <a href="/contact.html" class="apply-button">Apply Now</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
+  </body>
+</html>

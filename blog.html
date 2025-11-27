@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO / Social -->
+    <title>Blog - Boiyelove | Insights & Technology Updates</title>
+    <meta
+      name="description"
+      content="Stay updated with the latest insights, tips, and technology trends from Boiyelove International. Expert perspectives on IT solutions and digital transformation."
+    />
+    <meta name="author" content="Boiyelove International LLC" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:title" content="Blog - Boiyelove" />
+    <meta
+      property="og:description"
+      content="Latest insights and technology updates from Boiyelove"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boiyelove.com/blog" />
+    <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog - Boiyelove" />
+    <meta
+      name="twitter:description"
+      content="Latest insights and technology updates"
+    />
+    <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Favicon & touch icons (replace with your files) -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme color for mobile UI -->
+    <meta name="theme-color" content="#191937" />
+
+    <style>
+      /* Blog-specific styles */
+      .blog-hero {
+        background: linear-gradient(
+          135deg,
+          #191937 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        padding: 140px 0 100px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .blog-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 20% 50%,
+            rgba(25, 25, 55, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(45, 45, 95, 0.2) 0%,
+            transparent 50%
+          );
+      }
+
+      .blog-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        opacity: 0.4;
+        animation: backgroundScroll 60s linear infinite;
+      }
+
+      @keyframes backgroundScroll {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100px);
+        }
+      }
+
+      .blog-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .blog-hero h1 {
+        font-size: 4.5rem;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 24px;
+        letter-spacing: -2px;
+        text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+      }
+
+      .blog-hero h1 span {
+        background: linear-gradient(135deg, #191937 0%, #4a90e2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .blog-hero p {
+        font-size: 1.35rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.8;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+
+      .empty-state-section {
+        padding: 100px 0 120px;
+        background: #ffffff;
+        position: relative;
+      }
+
+      .empty-state-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        z-index: 0;
+      }
+
+      .empty-state-container {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .empty-state-visual {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      .empty-state-icon {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #191937 0%, #2d2d5f 100%);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 30px 80px rgba(25, 25, 55, 0.4),
+          0 10px 30px rgba(25, 25, 55, 0.3);
+        animation: float 4s ease-in-out infinite;
+        position: relative;
+        transform: rotate(-5deg);
+      }
+
+      .empty-state-icon::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(
+          135deg,
+          rgba(25, 25, 55, 0.2) 0%,
+          rgba(45, 45, 95, 0.2) 100%
+        );
+        border-radius: 36px;
+        z-index: -1;
+        animation: pulse-ring 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(-5deg);
+        }
+        50% {
+          transform: translateY(-25px) rotate(-5deg);
+        }
+      }
+
+      @keyframes pulse-ring {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0;
+        }
+      }
+
+      .empty-state-icon svg {
+        width: 80px;
+        height: 80px;
+        color: white;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+
+      .empty-state-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+        line-height: 1.2;
+      }
+
+      .empty-state-description {
+        font-size: 1.2rem;
+        color: #64748b;
+        line-height: 1.8;
+        margin-bottom: 50px;
+        font-weight: 400;
+      }
+
+      .subscribe-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 24px;
+        padding: 50px 40px;
+        margin-bottom: 60px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+      }
+
+      .subscribe-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+      }
+
+      .subscribe-subtitle {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 30px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        gap: 12px;
+        max-width: 550px;
+        margin: 0 auto;
+        background: white;
+        padding: 8px;
+        border-radius: 60px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .subscribe-input {
+        flex: 1;
+        min-width: 0;
+        padding: 18px 28px;
+        border: none;
+        border-radius: 60px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        outline: none;
+        background: transparent;
+      }
+
+      .subscribe-input::placeholder {
+        color: #94a3b8;
+      }
+
+      .subscribe-button {
+        padding: 18px 42px;
+        background: linear-gradient(135deg, #191937 0%, #2d2d5f 100%);
+        color: white;
+        border: none;
+        border-radius: 60px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        box-shadow: 0 8px 24px rgba(25, 25, 55, 0.4);
+      }
+
+      .subscribe-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(25, 25, 55, 0.5);
+      }
+
+      .subscribe-button:active {
+        transform: translateY(0);
+      }
+
+      .coming-soon-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+        color: white;
+        border-radius: 60px;
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+        animation: gentle-pulse 3s ease-in-out infinite;
+      }
+
+      .coming-soon-badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        animation: blink 2s ease-in-out infinite;
+      }
+
+      @keyframes gentle-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        margin-top: 60px;
+      }
+
+      .feature-item {
+        text-align: center;
+        padding: 40px 24px;
+        background: white;
+        border-radius: 20px;
+        border: 2px solid #f1f5f9;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #191937 0%, #2d2d5f 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-item:hover {
+        border-color: #e0e7ff;
+        box-shadow: 0 12px 40px rgba(25, 25, 55, 0.15);
+        transform: translateY(-4px);
+      }
+
+      .feature-item:hover::before {
+        transform: scaleX(1);
+      }
+
+      .feature-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 24px;
+        background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .feature-item:hover .feature-icon {
+        background: linear-gradient(135deg, #191937 0%, #2d2d5f 100%);
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      .feature-icon svg {
+        width: 36px;
+        height: 36px;
+        color: #191937;
+        transition: all 0.3s ease;
+      }
+
+      .feature-item:hover .feature-icon svg {
+        color: white;
+      }
+
+      .feature-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+      }
+
+      .feature-desc {
+        font-size: 0.95rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #191937 0%, #4a90e2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .stat-label {
+        font-size: 0.95rem;
+        color: #64748b;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .blog-hero {
+          padding: 100px 0 60px;
+        }
+
+        .blog-hero h1 {
+          font-size: 2.75rem;
+          letter-spacing: -1px;
+        }
+
+        .blog-hero p {
+          font-size: 1.1rem;
+        }
+
+        .empty-state-section {
+          padding: 60px 0 80px;
+        }
+
+        .empty-state-icon {
+          width: 120px;
+          height: 120px;
+        }
+
+        .empty-state-icon svg {
+          width: 60px;
+          height: 60px;
+        }
+
+        .empty-state-title {
+          font-size: 2.25rem;
+        }
+
+        .empty-state-description {
+          font-size: 1.05rem;
+        }
+
+        .subscribe-card {
+          padding: 40px 24px;
+        }
+
+        .subscribe-form {
+          flex-direction: column;
+          padding: 12px;
+          border-radius: 24px;
+        }
+
+        .subscribe-input {
+          min-width: 100%;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .stats-row {
+          gap: 40px;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a
+      class="skip-link"
+      href="#main-content"
+      style="position: absolute; left: -9999px"
+    >
+      Skip to content
+    </a>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Hero Section -->
+      <section class="blog-hero">
+        <div class="container">
+          <div class="blog-hero-content">
+            <div class="breadcrumb">
+              <a href="/">Boiyelove International</a>
+              <span class="separator">›</span>
+              <span>Blog</span>
+            </div>
+            <h1>Tech Insights & <span>Innovation</span></h1>
+            <p>
+              Discover expert perspectives, cutting-edge solutions, and industry
+              insights that empower your business to thrive in the digital age.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empty State Section -->
+      <section class="empty-state-section">
+        <div class="container">
+          <div class="empty-state-container">
+            <span class="coming-soon-badge">Coming Soon</span>
+
+            <div class="empty-state-visual">
+              <div class="empty-state-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <h2 class="empty-state-title">Great Content is Brewing</h2>
+            <p class="empty-state-description">
+              We're crafting exceptional content that will help you navigate the
+              ever-evolving technology landscape. Get ready for expert insights,
+              practical guides, and success stories that drive real business
+              transformation.
+            </p>
+
+            <div class="subscribe-card">
+              <h3 class="subscribe-title">🚀 Be the First to Know</h3>
+              <p class="subscribe-subtitle">
+                Join our exclusive list and get notified when we launch our
+                first article
+              </p>
+              <form
+                class="subscribe-form"
+                onsubmit="event.preventDefault(); alert('🎉 Success! You\'re now on our VIP list. We\'ll notify you as soon as our blog launches!');"
+              >
+                <input
+                  type="email"
+                  class="subscribe-input"
+                  placeholder="Enter your email address"
+                  required
+                  aria-label="Email address"
+                />
+                <button type="submit" class="subscribe-button">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="feature-title">Expert Insights</h3>
+                <p class="feature-desc">
+                  Deep dives into IT strategies and industry best practices from
+                  seasoned professionals
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
+                  </svg>
+                </div>
+                <h3 class="feature-title">Technology Trends</h3>
+                <p class="feature-desc">
+                  Stay ahead of the curve with emerging technologies and market
+                  insights
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="feature-title">Success Stories</h3>
+                <p class="feature-desc">
+                  Real transformation stories and measurable results from our
+                  client partnerships
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                    />
+                  </svg>
+                </div>
+                <h3 class="feature-title">Practical Guides</h3>
+                <p class="feature-desc">
+                  Step-by-step tutorials and actionable advice for immediate
+                  implementation
+                </p>
+              </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Articles Planned</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Expert Contributors</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">Weekly</div>
+                <div class="stat-label">Publishing Schedule</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-wrapper">
+            <div class="cta-content">
+              <p class="cta-subtitle">Need IT Solutions Now?</p>
+              <h2 class="cta-title">
+                Don't wait for our blog - let's solve your tech challenges today
+              </h2>
+              <p class="cta-text">
+                Call us on:
+                <a href="tel:+19294746274" class="cta-phone"
+                  >+1 (929) 474 62 74</a
+                >
+                or email us at
+                <a href="mailto:hello@boiyelove.com" class="cta-email"
+                  >hello@boiyelove.com</a
+                >
+                or fill out the following form to start the conversation.
+              </p>
+              <div class="cta-buttons">
+                <a href="/contact.html"
+                  ><button class="cta-primary">
+                    START WITH A FREE ASSESSMENT
+                  </button></a
+                >
+                <a href="/services.html">
+                  <button class="cta-secondary">VIEW OUR SERVICES</button>
+                </a>
+              </div>
+            </div>
+            <div class="cta-image">
+              <img src="/Images/img.png" alt="Contact us" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
