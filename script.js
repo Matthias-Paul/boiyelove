@@ -237,6 +237,182 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // ============================================
+// BENTO GRID SCROLL ANIMATIONS
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Create Intersection Observer for bento grid items
+  const bentoObserverOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const bentoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add reveal class with delay based on data attribute
+        const delay = entry.target.dataset.revealDelay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('reveal');
+        }, delay);
+        
+        // Unobserve after animation to improve performance
+        bentoObserver.unobserve(entry.target);
+      }
+    });
+  }, bentoObserverOptions);
+
+  // Observe all scroll-reveal elements
+  const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+  scrollRevealElements.forEach(element => {
+    bentoObserver.observe(element);
+  });
+
+  // Add stagger animation to stats and approach items
+  const statCards = document.querySelectorAll('.stat-card');
+  statCards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `all 0.6s ease ${index * 0.15}s`;
+    
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    statObserver.observe(card);
+  });
+
+  // Animate approach items
+  const approachItems = document.querySelectorAll('.approach-item');
+  approachItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateX(-30px)';
+    item.style.transition = `all 0.6s ease ${index * 0.2}s`;
+    
+    const approachObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateX(0)';
+          approachObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    approachObserver.observe(item);
+  });
+
+  // Animate tech tags
+  const techTags = document.querySelectorAll('.tech-tag');
+  techTags.forEach((tag, index) => {
+    tag.style.opacity = '0';
+    tag.style.transform = 'scale(0.8)';
+    tag.style.transition = `all 0.4s ease ${index * 0.05}s`;
+    
+    const techObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'scale(1)';
+          techObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    techObserver.observe(tag);
+  });
+
+  // Animate metric items with counter effect
+  const metricItems = document.querySelectorAll('.metric-item');
+  metricItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = `all 0.6s ease ${index * 0.15}s`;
+    
+    const metricObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          
+          // Animate the numbers
+          const valueElement = entry.target.querySelector('.metric-value');
+          if (valueElement) {
+            const text = valueElement.textContent;
+            const hasPercent = text.includes('%');
+            const hasX = text.includes('x');
+            const numericValue = parseFloat(text);
+            
+            if (!isNaN(numericValue)) {
+              animateValue(valueElement, 0, numericValue, 1500, hasPercent, hasX);
+            }
+          }
+          
+          metricObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    metricObserver.observe(item);
+  });
+});
+
+// Helper function to animate numbers
+function animateValue(element, start, end, duration, hasPercent = false, hasX = false) {
+  const startTime = performance.now();
+  
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    
+    // Easing function for smooth animation
+    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+    const current = start + (end - start) * easeOutQuart;
+    
+    let displayValue = Math.floor(current);
+    if (end % 1 !== 0) {
+      displayValue = current.toFixed(1);
+    }
+    
+    element.textContent = displayValue + (hasPercent ? '%' : '') + (hasX ? 'x' : '');
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = end + (hasPercent ? '%' : '') + (hasX ? 'x' : '');
+    }
+  }
+  
+  requestAnimationFrame(update);
+}
+
+// ============================================
+// PARALLAX EFFECT FOR HERO SECTIONS
+// ============================================
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const heroContent = document.querySelector('.hero-content');
+  const caseStudyHero = document.querySelector('.case-study-hero .hero-content');
+  
+  if (heroContent) {
+    heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+    heroContent.style.opacity = 1 - (scrolled / 500);
+  }
+  
+  if (caseStudyHero) {
+    caseStudyHero.style.transform = `translateY(${scrolled * 0.4}px)`;
+    caseStudyHero.style.opacity = 1 - (scrolled / 600);
+  }
+});
+
+// ============================================
 // CONSOLE BRANDING
 // ============================================
 
