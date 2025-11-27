@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta -->
@@ -8,13 +8,19 @@
 
     <!-- SEO / Social -->
     <title>Blog - Boiyelove | Insights & Technology Updates</title>
-    <meta name="description" content="Stay updated with the latest insights, tips, and technology trends from Boiyelove International. Expert perspectives on IT solutions and digital transformation." />
+    <meta
+      name="description"
+      content="Stay updated with the latest insights, tips, and technology trends from Boiyelove International. Expert perspectives on IT solutions and digital transformation."
+    />
     <meta name="author" content="Boiyelove International LLC" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph (social previews) -->
     <meta property="og:title" content="Blog - Boiyelove" />
-    <meta property="og:description" content="Latest insights and technology updates from Boiyelove" />
+    <meta
+      property="og:description"
+      content="Latest insights and technology updates from Boiyelove"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://boiyelove.com/blog" />
     <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
@@ -22,7 +28,10 @@
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Blog - Boiyelove" />
-    <meta name="twitter:description" content="Latest insights and technology updates" />
+    <meta
+      name="twitter:description"
+      content="Latest insights and technology updates"
+    />
     <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
 
     <!-- Favicon & touch icons (replace with your files) -->
@@ -31,9 +40,12 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -44,26 +56,38 @@
     <style>
       /* Blog-specific styles */
       .blog-hero {
-        background: linear-gradient(135deg, #191937 0%, #16213e 50%, #0f3460 100%);
+        background: linear-gradient(
+          135deg,
+          #191937 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
         padding: 140px 0 100px;
         position: relative;
         overflow: hidden;
       }
 
       .blog-hero::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: 
-          radial-gradient(circle at 20% 50%, rgba(25, 25, 55, 0.2) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(45, 45, 95, 0.2) 0%, transparent 50%);
+        background: radial-gradient(
+            circle at 20% 50%,
+            rgba(25, 25, 55, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(45, 45, 95, 0.2) 0%,
+            transparent 50%
+          );
       }
 
       .blog-hero::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -123,7 +147,7 @@
       }
 
       .empty-state-section::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -155,8 +179,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 
-          0 30px 80px rgba(25, 25, 55, 0.4),
+        box-shadow: 0 30px 80px rgba(25, 25, 55, 0.4),
           0 10px 30px rgba(25, 25, 55, 0.3);
         animation: float 4s ease-in-out infinite;
         position: relative;
@@ -164,20 +187,25 @@
       }
 
       .empty-state-icon::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -10px;
         left: -10px;
         right: -10px;
         bottom: -10px;
-        background: linear-gradient(135deg, rgba(25, 25, 55, 0.2) 0%, rgba(45, 45, 95, 0.2) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(25, 25, 55, 0.2) 0%,
+          rgba(45, 45, 95, 0.2) 100%
+        );
         border-radius: 36px;
         z-index: -1;
         animation: pulse-ring 3s ease-in-out infinite;
       }
 
       @keyframes float {
-        0%, 100% {
+        0%,
+        100% {
           transform: translateY(0px) rotate(-5deg);
         }
         50% {
@@ -186,7 +214,8 @@
       }
 
       @keyframes pulse-ring {
-        0%, 100% {
+        0%,
+        100% {
           transform: scale(1);
           opacity: 0.5;
         }
@@ -310,7 +339,7 @@
       }
 
       .coming-soon-badge::before {
-        content: '';
+        content: "";
         width: 8px;
         height: 8px;
         background: white;
@@ -319,7 +348,8 @@
       }
 
       @keyframes gentle-pulse {
-        0%, 100% {
+        0%,
+        100% {
           transform: scale(1);
         }
         50% {
@@ -328,7 +358,8 @@
       }
 
       @keyframes blink {
-        0%, 100% {
+        0%,
+        100% {
           opacity: 1;
         }
         50% {
@@ -355,7 +386,7 @@
       }
 
       .feature-item::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -513,7 +544,11 @@
   </head>
   <body>
     <!-- Skip link for accessibility -->
-    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;">
+    <a
+      class="skip-link"
+      href="#main-content"
+      style="position: absolute; left: -9999px"
+    >
       Skip to content
     </a>
 
@@ -522,7 +557,6 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-      
       <!-- Hero Section -->
       <section class="blog-hero">
         <div class="container">
@@ -534,8 +568,8 @@
             </div>
             <h1>Tech Insights & <span>Innovation</span></h1>
             <p>
-              Discover expert perspectives, cutting-edge solutions, and industry insights 
-              that empower your business to thrive in the digital age.
+              Discover expert perspectives, cutting-edge solutions, and industry
+              insights that empower your business to thrive in the digital age.
             </p>
           </div>
         </div>
@@ -546,29 +580,47 @@
         <div class="container">
           <div class="empty-state-container">
             <span class="coming-soon-badge">Coming Soon</span>
-            
+
             <div class="empty-state-visual">
               <div class="empty-state-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
                 </svg>
               </div>
             </div>
 
             <h2 class="empty-state-title">Great Content is Brewing</h2>
             <p class="empty-state-description">
-              We're crafting exceptional content that will help you navigate the ever-evolving technology landscape. 
-              Get ready for expert insights, practical guides, and success stories that drive real business transformation.
+              We're crafting exceptional content that will help you navigate the
+              ever-evolving technology landscape. Get ready for expert insights,
+              practical guides, and success stories that drive real business
+              transformation.
             </p>
 
             <div class="subscribe-card">
               <h3 class="subscribe-title">🚀 Be the First to Know</h3>
-              <p class="subscribe-subtitle">Join our exclusive list and get notified when we launch our first article</p>
-              <form class="subscribe-form" onsubmit="event.preventDefault(); alert('🎉 Success! You\'re now on our VIP list. We\'ll notify you as soon as our blog launches!');">
-                <input 
-                  type="email" 
-                  class="subscribe-input" 
-                  placeholder="Enter your email address" 
+              <p class="subscribe-subtitle">
+                Join our exclusive list and get notified when we launch our
+                first article
+              </p>
+              <form
+                class="subscribe-form"
+                onsubmit="event.preventDefault(); alert('🎉 Success! You\'re now on our VIP list. We\'ll notify you as soon as our blog launches!');"
+              >
+                <input
+                  type="email"
+                  class="subscribe-input"
+                  placeholder="Enter your email address"
                   required
                   aria-label="Email address"
                 />
@@ -582,42 +634,94 @@
             <div class="features-grid">
               <div class="feature-item">
                 <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
                   </svg>
                 </div>
                 <h3 class="feature-title">Expert Insights</h3>
-                <p class="feature-desc">Deep dives into IT strategies and industry best practices from seasoned professionals</p>
+                <p class="feature-desc">
+                  Deep dives into IT strategies and industry best practices from
+                  seasoned professionals
+                </p>
               </div>
 
               <div class="feature-item">
                 <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
                   </svg>
                 </div>
                 <h3 class="feature-title">Technology Trends</h3>
-                <p class="feature-desc">Stay ahead of the curve with emerging technologies and market insights</p>
+                <p class="feature-desc">
+                  Stay ahead of the curve with emerging technologies and market
+                  insights
+                </p>
               </div>
 
               <div class="feature-item">
                 <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
                   </svg>
                 </div>
                 <h3 class="feature-title">Success Stories</h3>
-                <p class="feature-desc">Real transformation stories and measurable results from our client partnerships</p>
+                <p class="feature-desc">
+                  Real transformation stories and measurable results from our
+                  client partnerships
+                </p>
               </div>
 
               <div class="feature-item">
                 <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                    />
                   </svg>
                 </div>
                 <h3 class="feature-title">Practical Guides</h3>
-                <p class="feature-desc">Step-by-step tutorials and actionable advice for immediate implementation</p>
+                <p class="feature-desc">
+                  Step-by-step tutorials and actionable advice for immediate
+                  implementation
+                </p>
               </div>
             </div>
 
@@ -646,15 +750,29 @@
           <div class="cta-wrapper">
             <div class="cta-content">
               <p class="cta-subtitle">Need IT Solutions Now?</p>
-              <h2 class="cta-title">Don't wait for our blog - let's solve your tech challenges today</h2>
+              <h2 class="cta-title">
+                Don't wait for our blog - let's solve your tech challenges today
+              </h2>
               <p class="cta-text">
-                Call us on: <a href="tel:+19294746274" class="cta-phone">+1 (929) 474 62 74</a> 
-                or email us at <a href="mailto:hello@boiyelove.com" class="cta-email">hello@boiyelove.com</a> 
+                Call us on:
+                <a href="tel:+19294746274" class="cta-phone"
+                  >+1 (929) 474 62 74</a
+                >
+                or email us at
+                <a href="mailto:hello@boiyelove.com" class="cta-email"
+                  >hello@boiyelove.com</a
+                >
                 or fill out the following form to start the conversation.
               </p>
               <div class="cta-buttons">
-                <button class="cta-primary">START WITH A FREE ASSESSMENT</button>
-                <button class="cta-secondary">VIEW OUR SERVICES</button>
+                <a href="/contact.html"
+                  ><button class="cta-primary">
+                    START WITH A FREE ASSESSMENT
+                  </button></a
+                >
+                <a href="/services.html">
+                  <button class="cta-secondary">VIEW OUR SERVICES</button>
+                </a>
               </div>
             </div>
             <div class="cta-image">
@@ -663,7 +781,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Footer Component -->

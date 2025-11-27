@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO / Social -->
+    <title>Terms of Service - Boiyelove International LLC</title>
+    <meta name="description" content="Read Boiyelove International's terms of service agreement for our design, development and internet-related services." />
+    <meta name="author" content="Boiyelove International LLC" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:title" content="Terms of Service - Boiyelove" />
+    <meta property="og:description" content="Terms of Service Agreement" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boiyelove.com/terms-of-service" />
+    <meta property="og:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Terms of Service - Boiyelove" />
+    <meta name="twitter:description" content="Terms of Service Agreement" />
+    <meta name="twitter:image" content="https://boiyelove.com/og-image.jpg" />
+
+    <!-- Favicon & touch icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme color for mobile UI -->
+    <meta name="theme-color" content="#191937" />
+
+    <style>
+      /* Terms of Service Page Styles */
+      .terms-hero {
+        background: linear-gradient(135deg, #191937 0%, #2d2d5f 100%);
+        padding: 140px 0 80px;
+        position: relative;
+        overflow: hidden;
+        color: white;
+      }
+
+      .terms-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.3;
+      }
+
+      .terms-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .terms-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+
+      .terms-hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      .last-revision {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+      }
+
+      .terms-content {
+        padding: 100px 0;
+        background: white;
+      }
+
+      .terms-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .terms-intro {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: var(--text-secondary);
+        margin-bottom: 60px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .terms-section {
+        margin-bottom: 56px;
+        scroll-margin-top: 100px;
+      }
+
+      .terms-section h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 24px;
+        margin-top: 0;
+        padding-bottom: 16px;
+        border-bottom: 3px solid #191937;
+        display: inline-block;
+      }
+
+      .terms-section h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        margin-top: 32px;
+      }
+
+      .terms-section p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+      }
+
+      .terms-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0;
+      }
+
+      .terms-section ul li {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+        padding-left: 36px;
+        position: relative;
+      }
+
+      .terms-section ul li::before {
+        content: '→';
+        position: absolute;
+        left: 8px;
+        color: #191937;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .terms-highlight {
+        background: #fff8e1;
+        border-left: 4px solid #ffc107;
+        padding: 28px;
+        margin: 32px 0;
+        border-radius: 8px;
+      }
+
+      .terms-highlight strong {
+        color: #f57c00;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .terms-highlight p {
+        color: #5d4037;
+        margin-bottom: 12px;
+      }
+
+      .contact-info-box {
+        background: linear-gradient(135deg, #191937 0%, #2d2d5f 100%);
+        color: white;
+        padding: 48px;
+        border-radius: 16px;
+        margin-top: 80px;
+        box-shadow: 0 12px 40px rgba(25, 25, 55, 0.3);
+      }
+
+      .contact-info-box h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: white;
+        border: none;
+        padding-bottom: 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-top: 32px;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 24px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-item h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #4a90e2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+      }
+
+      .contact-item p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .contact-item a {
+        color: #4a90e2;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item a:hover {
+        color: #5ba3f5;
+        text-decoration: underline;
+      }
+
+      .company-info {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 32px;
+        border-radius: 12px;
+        margin-top: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .company-block {
+        margin-bottom: 32px;
+      }
+
+      .company-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .company-block h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: white;
+      }
+
+      .company-block p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 6px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .company-block strong {
+        color: white;
+        font-weight: 600;
+      }
+
+      .table-of-contents {
+        background: #f8f9fa;
+        padding: 32px;
+        border-radius: 12px;
+        margin-bottom: 48px;
+        border: 2px solid #e9ecef;
+      }
+
+      .table-of-contents h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0px;
+        margin-top: 0;
+      }
+
+      .table-of-contents ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        column-count: 2;
+        column-gap: 12px;
+      }
+
+      .table-of-contents ul li::before {
+        display: none;
+      }
+
+      .table-of-contents a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 6px;
+      }
+
+      .table-of-contents a:hover {
+        color: #191937;
+        background: white;
+        padding-left: 16px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .terms-hero {
+          padding: 100px 0 60px;
+        }
+
+        .terms-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .terms-hero p {
+          font-size: 1rem;
+        }
+
+        .terms-content {
+          padding: 60px 0;
+        }
+
+        .terms-section h2 {
+          font-size: 1.75rem;
+        }
+
+        .terms-intro,
+        .terms-highlight,
+        .contact-info-box {
+          padding: 24px;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .table-of-contents ul {
+          column-count: 1;
+        }
+
+        .company-info {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;">
+      Skip to content
+    </a>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      
+      <!-- Hero Section -->
+      <section class="terms-hero">
+        <div class="container">
+          <div class="terms-hero-content">
+            <div class="breadcrumb">
+              <a href="/">Boiyelove International</a>
+              <span class="separator">›</span>
+              <span>Terms of Service</span>
+            </div>
+            <div class="last-revision">Last Revision: 23-03-2021</div>
+            <h1>Terms of Service Agreement</h1>
+            <p>Complete terms and conditions for our services</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terms Content -->
+      <section class="terms-content">
+        <div class="container">
+          <div class="terms-container">
+            
+            <!-- Introduction -->
+            <div class="terms-intro">
+              <p>
+                This Services Agreement (the "Agreement") contains the complete terms and conditions which govern Design, Development and other Internet-related services provided by BOIYELOVE INTERNATIONAL LLC/BOIYELOVE INTERNATIONAL (the "Services"). As used in this Agreement, "BOIYELOVE INT'L" means BOIYELOVE INTERNATIONAL LLC / BOIYELOVE INTERNATIONAL and "Client", "you", or "your" means you. You acknowledge that you have read the Agreement, and you agree to its terms and conditions and all policies posted on the BOIYELOVE INT'L site. As referred to in this Agreement, "Site" refers to a World Wide Web site and "BOIYELOVE INT'L Site" refers to the Site located at the URL https://www.boiyelove.com or any other successor Sites owned or maintained by BOIYELOVE INT'L.
+              </p>
+              <p style="margin-bottom: 0;">
+                The following terms and conditions apply to all website development / design services provided by BOIYELOVE INT'L to the Client.
+              </p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+              <h3>Quick Navigation</h3>
+              <ul>
+                <li><a href="#acceptance">Acceptance</a></li>
+                <li><a href="#charges">Charges</a></li>
+                <li><a href="#client-review">Client Review</a></li>
+                <li><a href="#turnaround">Turnaround Time</a></li>
+                <li><a href="#payment">Payment</a></li>
+                <li><a href="#expenses">Additional Expenses</a></li>
+                <li><a href="#browsers">Web Browsers</a></li>
+                <li><a href="#default">Default</a></li>
+                <li><a href="#termination">Termination</a></li>
+                <li><a href="#indemnity">Indemnity</a></li>
+                <li><a href="#copyright">Copyright</a></li>
+                <li><a href="#media">Standard Media Delivery</a></li>
+                <li><a href="#design-credit">Design Credit</a></li>
+                <li><a href="#access">Access Requirements</a></li>
+                <li><a href="#alterations">Post-Placement Alterations</a></li>
+                <li><a href="#general">General</a></li>
+                <li><a href="#governing-law">Governing Law</a></li>
+                <li><a href="#liability">Liability</a></li>
+                <li><a href="#severability">Severability</a></li>
+              </ul>
+            </div>
+
+            <!-- Acceptance -->
+            <div class="terms-section" id="acceptance">
+              <h2>Acceptance</h2>
+              <p>
+                It is not necessary for any Client to have signed an acceptance of these terms and conditions for them to apply. If a Client accepts a quote then the Client will be deemed to have satisfied themselves as to the terms applying and have accepted these terms and conditions in full.
+              </p>
+              <p>
+                Please read these terms and conditions carefully. Any purchase or use of our services implies that you have read and accepted our terms and conditions.
+              </p>
+            </div>
+
+            <!-- Charges -->
+            <div class="terms-section" id="charges">
+              <h2>Charges</h2>
+              <p>
+                Charges for services to be provided by BOIYELOVE INT'L are defined in the project quotation that the Client receives via e-mail. Quotations are valid for a period of 30 days. BOIYELOVE INT'L reserves the right to alter or decline to provide a quotation after expiry of the 30 days.
+              </p>
+              <p>
+                Unless agreed otherwise with the Client, all  design, development or consultation services require an advance payment of a minimum of fifty (50) percent of the project quotation total before the work is supplied to the Client for review. The remaining fifty (50) percent of the project quotation total due upon completion of the work, prior to upload to the server or release of materials.
+              </p>
+              <p>
+                Payment for services is due by cheque or bank transfer. Cheques should be made payable to BOIYELOVE INTERNATIONAL LLC and sent to BOIYELOVE INT'L LLC. Bank details will be made available on invoices.
+              </p>
+            </div>
+
+            <!-- Client Review -->
+            <div class="terms-section" id="client-review">
+              <h2>Client Review</h2>
+              <p>
+                BOIYELOVE INT'L will provide the Client with an opportunity to review the appearance and content of the service deliverable during the design phase and once the overall  development is completed. At the completion of the project, such materials will be deemed to be accepted and approved unless the Client notifies BOIYELOVE INT'L otherwise within ten (10) days of the date the materials are made available to the Client.
+              </p>
+            </div>
+
+            <!-- Turnaround Time and Content Control -->
+            <div class="terms-section" id="turnaround">
+              <h2>Turnaround Time and Content Control</h2>
+              <p>
+                BOIYELOVE INT'L will deploy, launch or supply the Client's deliverable by the date specified in the project proposal, or at date agreed with Client upon BOIYELOVE INT'L receiving initial payment, unless a delay is specifically requested by the Client and agreed by BOIYELOVE INT'L, caused by a force-majeure or BOIYELOVE INT'L deems it necessary to extend the date in merit of higher quality of deliverable.
+              </p>
+              <p>
+                In return, the Client agrees to delegate a single individual as a primary contact to aid BOIYELOVE INT'L with progressing the commission in a satisfactory and expedient manner.
+              </p>
+              <p>
+                During the project, BOIYELOVE INT'L will require the Client to provide content; text, images, movies, sound files, as well as material required to manufacture produce of the agreed service.
+              </p>
+
+              <h3>Failure to provide required material:</h3>
+              <p>
+                BOIYELOVE INT'L is a small business, to remain efficient we must ensure that work we have programmed is carried out at the scheduled time. On occasions we may have to reject offers for other work and enquiries to ensure that your work is completed at the time arranged.
+              </p>
+              <p>
+                This is why we ask that you provide all the required information in advance. On any occasion where progress cannot be made with your service because we have not been given the required information in the agreed time frame, and we are delayed as result, we reserve the right to impose a surcharge.
+              </p>
+              <p>
+                If you agree to provide us with the required information and subsequently fail to do within two week of project commencement we reserve the right to close the project and the balance remaining becomes payable immediately.
+              </p>
+
+              <div class="terms-highlight">
+                <p><strong>NOTE:</strong> Text content should be delivered as a Microsoft Word, email (or similar) document with the pages in the supplied document representing the content of the relevant pages on your website or data formatted in its originally requested structure.</p>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="terms-section" id="payment">
+              <h2>Payment</h2>
+              <p>
+                Invoices will be provided by BOIYELOVE INT'L upon completion but before publishing, deploying or making deliverables available to you. Invoices are normally sent via email or electronically; however, the Client may choose to receive hard copy invoices. Invoices are due upon receipt.
+              </p>
+            </div>
+
+            <!-- Additional Expenses -->
+            <div class="terms-section" id="expenses">
+              <h2>Additional Expenses</h2>
+              <p>
+                Client agrees to reimburse BOIYELOVE INT'L for any additional expenses necessary for the completion of the work. Examples would be purchase of special fonts, stock photography, server hosting fees, domain name etc.
+              </p>
+            </div>
+
+            <!-- Web Browsers -->
+            <div class="terms-section" id="browsers">
+              <h2>Web Browsers (Website Design)</h2>
+              <p>
+                BOIYELOVE INT'L makes every effort to ensure websites are designed to be viewed by the majority of visitors. Websites are designed to work with the most popular current browsers (e.g. Firefox, Internet Explorer, Google Chrome, etc.). Client agrees that BOIYELOVE INT'L cannot guarantee correct functionality with all browser software across different operating systems.
+              </p>
+              <p>
+                BOIYELOVE INT'L cannot accept responsibility for web pages which do not display acceptably in new versions of browsers released after the website have been designed and handed over to the Client. As such, BOIYELOVE INT'L reserves the right to quote for any work involved in changing the website design or website code for it to work with updated browser software.
+              </p>
+            </div>
+
+            <!-- Default -->
+            <div class="terms-section" id="default">
+              <h2>Default</h2>
+              <p>
+                Accounts unpaid thirty (30) days after the date of invoice will be considered in default. If the Client in default maintains any information or files on BOIYELOVE INT'L's Web space, BOIYELOVE INT'L will, at its discretion, remove all such material from its web space. BOIYELOVE INT'L is not responsible for any loss of data incurred due to the removal of the service. Removal of such material does not relieve the Client of the obligation to pay any outstanding charges assessed to the Client's account. Cheques returned for insufficient funds will result in the Client's account to be immediately considered to be in default until full payment is received. Clients with accounts in default agree to pay BOIYELOVE INT'L reasonable expenses, including legal fees and costs for collection by third-party agencies, incurred by BOIYELOVE INT'L in enforcing these Terms and Conditions.
+              </p>
+            </div>
+
+            <!-- Termination -->
+            <div class="terms-section" id="termination">
+              <h2>Termination</h2>
+              <p>
+                Termination of services by the Client must be requested in a written notice and will be effective on receipt of such notice. Telephone requests for termination of services will not be honoured until and unless confirmed in writing. The Client will be invoiced for work completed to the date of first notice of cancellation for payment in full within thirty (30) days.
+              </p>
+            </div>
+
+            <!-- Indemnity -->
+            <div class="terms-section" id="indemnity">
+              <h2>Indemnity</h2>
+              <p>
+                All BOIYELOVE INT'L services may be used for lawful purposes only. You agree to indemnify and hold BOIYELOVE INT'L harmless from any claims resulting from your use of our service that damages you or any other party.
+              </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="terms-section" id="copyright">
+              <h2>Copyright</h2>
+              <p>
+                The Client retains the copyright to data, files and graphic logos provided by the Client, and grants BOIYELOVE INT'L the rights to publish and use such material. The Client must obtain permission and rights to use any information or files that are copyrighted by a third party. The Client is further responsible for granting BOIYELOVE INT'L permission and rights for use of the same and agrees to indemnify and hold harmless BOIYELOVE INT'L from any and all claims resulting from the Client's negligence or inability to obtain proper copyright permissions. A contract for service and/or placement shall be regarded as a guarantee by the Client to BOIYELOVE INT'L that all such permissions and authorities have been obtained. Evidence of permissions and authorities may be requested.
+              </p>
+            </div>
+
+            <!-- Standard Media Delivery -->
+            <div class="terms-section" id="media">
+              <h2>Standard Media Delivery</h2>
+              <p>
+                Unless otherwise specified in the project quotation, this Agreement assumes that any text will be provided by the Client in electronic format (ASCII text files delivered on thumbdrive, CD or via e-mail or FTP) and that all photographs and other graphics will be provided physically in high quality print suitable for scanning or electronically in .gif, .jpeg, .png or .tiff format. Although every reasonable attempt shall be made by BOIYELOVE INT'L to return to the Client any images or printed material provided for use in creation of the Client's deliverable, such return cannot be guaranteed.
+              </p>
+            </div>
+
+            <!-- Design Credit -->
+            <div class="terms-section" id="design-credit">
+              <h2>Design Credit</h2>
+              <p>
+                A link to BOIYELOVE INT'L will appear in either small type or by a small graphic at the bottom of the Client's website. If a graphic is used, it will be designed to fit in with the overall site design. The Client also agrees that the website developed for the Client may be presented in BOIYELOVE INT'L's portfolio.
+              </p>
+            </div>
+
+            <!-- Access Requirements -->
+            <div class="terms-section" id="access">
+              <h2>Access Requirements</h2>
+              <p>
+                If the Client's website is to be installed on a third-party server, BOIYELOVE INT'L must be granted temporary read/write access to the Client's storage directories which must be accessible via FTP and/or SSH. Depending on the specific nature of the project, other resources might also need to be configured on the server.
+              </p>
+            </div>
+
+            <!-- Post-Placement Alterations -->
+            <div class="terms-section" id="alterations">
+              <h2>Post-Placement Alterations</h2>
+              <p>
+                BOIYELOVE INT'L cannot accept responsibility for any alterations caused by a third party occurring to the Client's pages once installed. Such alterations include, but are not limited to additions, modifications or deletions.
+              </p>
+            </div>
+
+            <!-- General -->
+            <div class="terms-section" id="general">
+              <h2>General</h2>
+              <p>
+                These Terms and Conditions supersede all previous representations, understandings or agreements. The Client's signature below or payment of an advance fee constitutes agreement to and acceptance of these Terms and Conditions. Payment online is also an acceptance of our terms and conditions.
+              </p>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="terms-section" id="governing-law">
+              <h2>Governing Law</h2>
+              <p>
+                This Agreement shall be governed by United States Law and Nigerian Law.
+              </p>
+            </div>
+
+            <!-- Liability -->
+            <div class="terms-section" id="liability">
+              <h2>Liability</h2>
+              <p>
+                BOIYELOVE INT'L hereby excludes itself, its Employees and or Agents from all and any liability from:
+              </p>
+              <ul>
+                <li>Loss or damage caused by any inaccuracy;</li>
+                <li>Loss or damage caused by omission;</li>
+                <li>Loss or damage caused by delay or error, whether the result of negligence or other cause in the production of the web site;</li>
+                <li>Loss or damage to clients' artwork/photos, supplied for the site. Immaterial whether the loss or damage results from negligence or otherwise.</li>
+              </ul>
+              <p>
+                The entire liability of BOIYELOVE INT'L to the Client in respect of any claim whatsoever or breach of this Agreement, whether or not arising out of negligence, shall be limited to the charges paid for the Services under this Agreement in respect of which the breach has arisen.
+              </p>
+            </div>
+
+            <!-- Severability -->
+            <div class="terms-section" id="severability">
+              <h2>Severability</h2>
+              <p>
+                In the event any one or more of the provisions of this Agreement shall be held to be invalid, illegal or unenforceable, the remaining provisions of this Agreement shall be unimpaired and the Agreement shall not be void for this reason alone. Such invalid, illegal or unenforceable provision shall be replaced by a mutually acceptable valid, legal and enforceable provision, which comes closest to the intention of the parties underlying the invalid.
+              </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-box">
+              <h2>Contact Information</h2>
+              
+              <div class="contact-grid">
+                <div class="contact-item">
+                  <h3>Enquiry Hotline</h3>
+                  <p><a href="tel:+19294746274">+1 (929) 474 6274</a></p>
+                </div>
+                <div class="contact-item">
+                  <h3>Email</h3>
+                  <p><a href="mailto:hello@boiyelove.com">hello@boiyelove.com</a></p>
+                </div>
+              </div>
+
+              <div class="company-info">
+                <div class="company-block">
+                  <h4>United States</h4>
+                  <p><strong>Legal Name of Company:</strong> BOIYELOVE INTERNATIONAL LLC</p>
+                  <p><strong>Name of Business:</strong> BOIYELOVE INTERNATIONAL LLC</p>
+                  <p><strong>Place Of Registration:</strong> UNITED STATES</p>
+                  <p><strong>Physical Address:</strong> 244 Madison Avenue, New York, New York, United States</p>
+                </div>
+
+                <div class="company-block">
+                  <h4>Nigeria</h4>
+                  <p><strong>Legal Name of Company:</strong> BOIYELOVE INTERNATIONAL</p>
+                  <p><strong>Name of Business:</strong> BOIYELOVE INTERNATIONAL</p>
+                  <p><strong>Place Of Registration:</strong> NIGERIA</p>
+                  <p><strong>Physical Address:</strong> Departure Hall, Murtala Muhammed Domestic Terminal 1, Ikeja, Lagos, Nigeria.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script>
+      // Smooth scroll for table of contents links
+      document.querySelectorAll('.table-of-contents a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
